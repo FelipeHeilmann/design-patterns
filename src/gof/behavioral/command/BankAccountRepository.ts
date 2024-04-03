@@ -1,4 +1,4 @@
-import BankAccount from "./BankAccount";
+import BankAccount from "./BankAccount"
 
 export default interface IBankAccountRepository {
     save(bankAccount: BankAccount): Promise<void>

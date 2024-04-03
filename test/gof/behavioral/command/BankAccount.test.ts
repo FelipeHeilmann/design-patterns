@@ -12,7 +12,7 @@ test("Deve fazer uma transferencia entre duas contas", function () {
     expect(to.getBalance()).toBe(100)
 })
 
-test("Deve fazer uma transferencia entre duas contas usando um comando", function () {
+test("Deve fazer uma transferência entre duas contas usando um comando", function () {
     const from = new BankAccount(1)
     expect(from.getBalance()).toBe(0)
     const to = new BankAccount(2)

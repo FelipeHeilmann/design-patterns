@@ -40,7 +40,7 @@ test("Deve calcular a tarifa para um veiculo estacionado no shopping", async fun
     expect(output.fare).toBe(30)
 })
 
-test("Deve calcular a tarifa para um veiculo estacionado na praia", async function () {
+test("Deve calcular a tarifa para um veículo estacionado na praia", async function () {
     const parkingTicketRepository = new ParkingTicketRepositoryDatabase()
     const plate = "AAA" + `${Math.random() * 1000}`.padStart(4, "0")
     const checkin = new Checkin(parkingTicketRepository)

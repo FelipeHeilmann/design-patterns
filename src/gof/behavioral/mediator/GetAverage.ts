@@ -1,4 +1,4 @@
-import IAverageRepository from "./AverageRepository";
+import IAverageRepository from "./AverageRepository"
 
 export class GetAverage {
     constructor(readonly averageRepository: IAverageRepository) { }

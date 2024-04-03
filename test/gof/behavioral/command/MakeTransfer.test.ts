@@ -3,7 +3,7 @@ import { BankRepositoryMemory } from "../../../../src/gof/behavioral/command/Ban
 import GetBalance from "../../../../src/gof/behavioral/command/GetBalance"
 import MakeTransfer from "../../../../src/gof/behavioral/command/MakeTransfer"
 
-test("Deve fazer uma transferencia bancaria", async function () {
+test("Deve fazer uma transferência bancaria", async function () {
     const bankAccountRepository = new BankRepositoryMemory()
     bankAccountRepository.save(new BankAccount(1))
     bankAccountRepository.save(new BankAccount(2))

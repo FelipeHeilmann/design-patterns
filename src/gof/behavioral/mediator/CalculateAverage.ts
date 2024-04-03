@@ -1,6 +1,6 @@
-import Average from "./Average";
-import IAverageRepository from "./AverageRepository";
-import IGradeRepository from "./GradeRepository";
+import Average from "./Average"
+import IAverageRepository from "./AverageRepository"
+import IGradeRepository from "./GradeRepository"
 
 export default class CalculateAverage {
     constructor(readonly gradeRepository: IGradeRepository, readonly averageRepository: IAverageRepository) { }

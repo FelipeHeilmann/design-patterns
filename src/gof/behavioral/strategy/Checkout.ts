@@ -1,4 +1,4 @@
-import IParkingTicketRepository from "./ParkingTicketRespository";
+import IParkingTicketRepository from "./ParkingTicketRespository"
 
 export default class Checkout {
     constructor(readonly parkingTicketRepository: IParkingTicketRepository) { }

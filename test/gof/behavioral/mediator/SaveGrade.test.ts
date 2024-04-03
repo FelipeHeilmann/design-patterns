@@ -35,7 +35,7 @@ test('Deve salvar a nota do aluno e calcular a media', async function () {
     expect(output.average).toBe(9)
 })
 
-test.only('Deve salvar a nota do aluno e calcular a media usando mediator', async function () {
+test.only('Deve salvar a nota do aluno e calcular a média usando mediator', async function () {
     const gradeRepository = new GradeRepositoryDatabase()
     const averageRepository = new AverageRepositoryDatabase()
     const studentId = Math.floor(Math.random() * 10000)
