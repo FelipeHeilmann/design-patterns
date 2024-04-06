@@ -36,9 +36,9 @@ export class PublicFareCalculator implements FareCalculator {
 
 export class FareCalculatorFactory {
     static create(location: string): FareCalculator {
-        if (location === "airport") return new AirportFareCalculator
-        if (location === "shopping") return new ShoppingFareCalculator
-        if (location === "beach") return new BeachFareCalculator
+        if (location === "airport") return new AirportFareCalculator()
+        if (location === "shopping") return new ShoppingFareCalculator()
+        if (location === "beach") return new BeachFareCalculator()
         if (location === "public") return new PublicFareCalculator()
         throw new Error("Location not found")
     }

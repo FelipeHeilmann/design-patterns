@@ -19,7 +19,7 @@ export class NormalFareCalculator implements FareCalculator {
     }
 }
 
-export class OvernightFareCalculator {
+export class OvernightFareCalculator implements FareCalculator {
     FARE = 3.9
 
     constructor(readonly next?: FareCalculator) { }
@@ -33,7 +33,7 @@ export class OvernightFareCalculator {
     }
 }
 
-export class SundayFareCalculator {
+export class SundayFareCalculator implements FareCalculator{
     FARE = 2.9
 
     constructor(readonly next?: FareCalculator) { }
@@ -47,7 +47,7 @@ export class SundayFareCalculator {
     }
 }
 
-export class OvernightSundayFareCalculator {
+export class OvernightSundayFareCalculator implements FareCalculator{
     FARE = 5
 
     constructor(readonly next?: FareCalculator) { }
