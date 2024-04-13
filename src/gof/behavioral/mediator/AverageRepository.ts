@@ -13,6 +13,7 @@ export class AverageRepositoryDatabase implements IAverageRepository {
         await connection.query("insert into design_patterns.average (student_id, value) values ($1, $2)", [average.studentId, average.value])
         await connection.$pool.end()
     }
+    
     async get(studentId: number): Promise<Average> {
         const connection = pgp()("postgres://postgres:postgres@localhost:5432/branas")
         const [averageData] = await connection.query("select * from design_patterns.average where student_id = $1", [studentId])
