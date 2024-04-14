@@ -1,4 +1,4 @@
-import { SACInsallmentCalculator } from "./InstallmentCalculator"
+import { SACInstallmentCalculator } from "./InstallmentCalculator"
 import IInstallmentRepository from "./InstallmentRepository"
 import { MortgageLoan } from "./Loan"
 import ILoanFactory, { LoanFactoryFactory } from "./LoanFactory"
@@ -16,7 +16,6 @@ export default class ApplyForLoan {
 
     async execute(input: Input): Promise<Output> {
         const loanFactory = LoanFactoryFactory.create(input.type)
-
         const loan = loanFactory.createLoan(input.amount, input.income, input.installments)
         const installmentCalculator = loanFactory.createInstallmentCalculator()
         const installments = installmentCalculator.calculate(loan)

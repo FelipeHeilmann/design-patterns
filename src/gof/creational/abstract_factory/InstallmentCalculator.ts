@@ -6,7 +6,7 @@ export default interface InstallmentCalculator {
     calculate(loan: Loan): Installment[]
 }
 
-export class SACInsallmentCalculator implements InstallmentCalculator {
+export class SACInstallmentCalculator implements InstallmentCalculator {
 
     calculate(loan: Loan): Installment[] {
         const installments: Installment[] = []
@@ -34,7 +34,7 @@ export class SACInsallmentCalculator implements InstallmentCalculator {
     }
 }
 
-export class PriceInsallmentCalculator implements InstallmentCalculator {
+export class PriceInstallmentCalculator implements InstallmentCalculator {
 
     calculate(loan: Loan): Installment[] {
         const installments: Installment[] = []

@@ -1,4 +1,4 @@
-import InstallmentCalculator, { PriceInsallmentCalculator, SACInsallmentCalculator } from "./InstallmentCalculator"
+import InstallmentCalculator, { PriceInstallmentCalculator, SACInstallmentCalculator } from "./InstallmentCalculator"
 import Loan, { CarLoan, MortgageLoan } from "./Loan"
 
 export default interface ILoanFactory {
@@ -14,7 +14,7 @@ export class MortgageLoanFactory implements ILoanFactory {
     }
 
     createInstallmentCalculator(): InstallmentCalculator {
-        return new SACInsallmentCalculator()
+        return new SACInstallmentCalculator()
     }
 }
 
@@ -25,7 +25,7 @@ export class CarLoanFactory implements ILoanFactory {
     }
 
     createInstallmentCalculator(): InstallmentCalculator {
-        return new PriceInsallmentCalculator()
+        return new PriceInstallmentCalculator()
     }
 }
 

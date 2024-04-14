@@ -1,8 +1,8 @@
-import { PriceInsallmentCalculator, SACInsallmentCalculator } from "../../../../src/gof/creational/abstract_factory/InstallmentCalculator"
+import { PriceInstallmentCalculator, SACInstallmentCalculator } from "../../../../src/gof/creational/abstract_factory/InstallmentCalculator"
 import { MortgageLoan } from "../../../../src/gof/creational/abstract_factory/Loan"
 
 test("Deve calcular as parcelas utilizando SAC", function() {
-    const installmentCalculator = new SACInsallmentCalculator()
+    const installmentCalculator = new SACInstallmentCalculator()
     const loan = MortgageLoan.create(100_000, 10_000, 240)
     const installments = installmentCalculator.calculate(loan)
     expect(installments).toHaveLength(240)
@@ -19,7 +19,7 @@ test("Deve calcular as parcelas utilizando SAC", function() {
 })
 
 test("Deve calcular as parcelas utilizando PRICE", function() {
-    const installmentCalculator = new PriceInsallmentCalculator()
+    const installmentCalculator = new PriceInstallmentCalculator()
     const loan = MortgageLoan.create(100_000, 10_000, 240)
     const installments = installmentCalculator.calculate(loan)
     expect(installments).toHaveLength(240)
